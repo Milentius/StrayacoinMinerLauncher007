@@ -1,0 +1,88 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StrayacoinMinerLauncher007.Pages"
+      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="StrayacoinMinerLauncher007.Pages.MinerControlPanel"
+      mc:Ignorable="d" d:DesignWidth="756"
+      Title="MinerControlPanel" Height="440">
+
+    <Grid Background="#FF232323">
+        <DockPanel x:Name="DockPanelTopSection" LastChildFill="False" Height="40" VerticalAlignment="Top">
+            <Label Content="Miner Output Controls" Width="215"/>
+            <Label Content="Date" Width="66" Background="#FF373737"/>
+            <Label Content="Time" Width="53" Background="#FF373737"/>
+            <Label Content="Miner" Width="55" Background="#FF373737"/>
+            <Label Content="Miner Output" Width="141" Background="#FF373737"/>
+            <Label Content="Network Difficulty" Width="120" Background="#FF373737"/>
+            <Label Content="Network Hashrate" Width="106" Background="#FF373737"/>
+        </DockPanel>
+
+        <DockPanel x:Name="DockPanelBottomSection" LastChildFill="False" Margin="0,40,0,0">
+            <DockPanel LastChildFill="False" Width="215">
+                <StackPanel Width="215">
+                    <StackPanel Height="40" Background="#FF373737">
+                        <Label Content="Output Type" Background="{x:Null}" Height="40"/>
+                    </StackPanel>
+                    <StackPanel Height="40" Orientation="Horizontal">
+                        <Button Content="Default" Width="65" Background="{x:Null}" Height="32" Padding="1,0,1,1" BorderThickness="1,1,1,1" Margin="4,0,0,0"/>
+                        <Button Content="Custom" Width="65" Height="32" Padding="1,0,1,1" Margin="6,0,0,0" BorderBrush="#FF33C300"/>
+                        <Button Content="Extended" Width="65" Height="32" Padding="1,0,1,1" Margin="6,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Height="40" Background="#FF373737">
+                        <Label Content="Show Date &amp; Time" Background="{x:Null}" Height="29.63"/>
+                    </StackPanel>
+                    <StackPanel Height="40" Orientation="Horizontal">
+                        <RadioButton GroupName="ShowDateTime" Content="Local" Width="71.66" Padding="4,-1,0,0" BorderThickness="11,1,1,1" Background="#FFC8C8C8" BorderBrush="#FF232323" IsChecked="True"/>
+                        <RadioButton GroupName="ShowDateTime" Content="Network" Width="71.66" BorderThickness="3,1,1,1" Background="#FFC8C8C8" BorderBrush="#FF232323" Padding="4,-1,0,0"/>
+                        <RadioButton GroupName="ShowDateTime" Content="Off" Width="71.66" Padding="4,-1,0,0" BorderThickness="16,1,1,1" Background="#FFC8C8C8" BorderBrush="#FF232323"/>
+                    </StackPanel>
+                    <StackPanel Height="40" Background="#FF373737">
+                        <Label Content="Show Hashrate" Background="{x:Null}" Height="40"/>
+                    </StackPanel>
+                    <StackPanel Height="40" Orientation="Horizontal">
+                        <RadioButton GroupName="showhash" Content="Enabled" Width="107.5" Padding="4,-1,0,0" BorderThickness="20,1,1,1" Background="#FFC8C8C8" BorderBrush="#FF232323" IsChecked="True"/>
+                        <RadioButton GroupName="showhash" Content="Disabled" Width="107.5" BorderThickness="20,1,1,1" Background="#FFC8C8C8" BorderBrush="#FF232323" Padding="4,-1,0,0"/>
+                    </StackPanel>
+                    <StackPanel Height="40" Background="#FF373737">
+                        <Label Content="Show Difficulty" Background="{x:Null}" Height="40"/>
+                    </StackPanel>
+                    <StackPanel Height="40" Orientation="Horizontal">
+                        <RadioButton GroupName="showDiff" Content="Enabled" Width="107.5" Padding="4,-1,0,0" BorderThickness="20,1,1,1" Background="#FFC8C8C8" BorderBrush="#FF232323" IsChecked="True"/>
+                        <RadioButton GroupName="showDiff" Content="Disabled" Width="107.5" BorderThickness="20,1,1,1" Background="#FFC8C8C8" BorderBrush="#FF232323" Padding="4,-1,0,0"/>
+                    </StackPanel>
+                    <StackPanel Height="40" Background="#FF373737">
+                        <Label Content="Show Network Blocks Mined" Background="{x:Null}" Height="40"/>
+                    </StackPanel>
+                    <StackPanel Height="40" Orientation="Horizontal">
+                        <RadioButton GroupName="ShowBlocks" Content="User" Width="71.66" Padding="4,-1,0,0" BorderThickness="11,1,1,1" Background="#FFC8C8C8" BorderBrush="#FF232323"/>
+                        <RadioButton GroupName="ShowBlocks" Content="Network" Width="71.66" BorderThickness="3,1,1,1" Background="#FFC8C8C8" BorderBrush="#FF232323" Padding="4,-1,0,0" IsChecked="True"/>
+                        <RadioButton GroupName="ShowBlocks" Content="Off" Width="71.66" Padding="4,-1,0,0" BorderThickness="16,1,1,1" Background="#FFC8C8C8" BorderBrush="#FF232323"/>
+                    </StackPanel>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel LastChildFill="False" Width="540" DockPanel.Dock="Right" Height="400">
+                <StackPanel x:Name="StackPanelMinerOutput" DockPanel.Dock="Bottom" Height="400" Orientation="Horizontal">
+                    <StackPanel Height="400" Width="118" Orientation="Horizontal">
+                        <TextBlock TextWrapping="Wrap" Text="15/6/2023" Height="400" Padding="4,5,0,0" Foreground="#FFD900DA" Width="65"/>
+                        <TextBlock TextWrapping="Wrap" Text="12:37AM" Height="400" Padding="2,5,0,0" Foreground="#FF00E8C3" Width="53"/>
+                    </StackPanel>
+                    <StackPanel Height="400" Width="55">
+                        <TextBlock TextWrapping="Wrap" Text="1" Height="400" Padding="23,5,0,0" Foreground="#FF06D000"/>
+                    </StackPanel>
+                    <StackPanel Height="400" Width="141">
+                        <TextBlock TextWrapping="Wrap" Text="Generating Block 'n' " Height="400" Padding="16,5,0,0" Foreground="#FFC5F300"/>
+                    </StackPanel>
+                    <StackPanel Height="400" Width="120">
+                        <TextBlock TextWrapping="Wrap" Text="0.15785465" Height="400" Padding="29,5,0,0" Foreground="#FF00B2ED"/>
+                    </StackPanel>
+                    <StackPanel Height="400" Width="106">
+                        <TextBlock TextWrapping="Wrap" Text="650.52 KH/s" Height="400" Padding="22,5,0,0" Foreground="#FF00DC90"/>
+                    </StackPanel>
+                </StackPanel>
+            </DockPanel>
+        </DockPanel>
+
+    </Grid>
+</Page>

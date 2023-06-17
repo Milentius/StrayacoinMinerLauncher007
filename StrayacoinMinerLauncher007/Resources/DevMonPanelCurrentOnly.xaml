@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="StrayacoinMinerLauncher007.Resources.DevMonPanelCurrentOnly"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StrayacoinMinerLauncher007.Resources"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="420">
+    <Grid>
+        <StackPanel x:Name="StackPanelBase" Orientation="Horizontal">
+            <Label x:Name="lblSensorName" Content="{Binding SensorName}" Background="{x:Null}" Height="40" Width="190"/>
+            <Label x:Name="label1" Content="Current" Background="{x:Null}" Height="40" Width="70"/>
+            <Label x:Name="lblSensorValue" Content="{Binding SensorValue}" Background="{x:Null}" Height="40" Width="160"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

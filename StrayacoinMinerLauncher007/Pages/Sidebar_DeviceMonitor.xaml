@@ -1,0 +1,42 @@
+﻿<Page x:Class="StrayacoinMinerLauncher007.Pages.Sidebar_DeviceMonitor"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StrayacoinMinerLauncher007.Pages"
+      xmlns:Resources="clr-namespace:StrayacoinMinerLauncher007.Resources"
+      mc:Ignorable="d" 
+      d:DesignHeight="856" d:DesignWidth="420"
+      Title="Sidebar_DeviceMonitor" Unloaded="Page_Unloaded">
+
+    <Grid Background="#FF232323">
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <DockPanel x:Name="DockPanelMainPanel" LastChildFill="False" Height="1136" Width="420">
+                <StackPanel Width="420" DockPanel.Dock="Top" Orientation="Horizontal" Height="40">
+                    <Label Content="CPU Package/Average" Width="420" FontSize="16" FontWeight="Bold"/>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="40" Width="420">
+                    <Label Content="Package Temperature" Width="180" Background="#FF373737"/>
+                    <Label Content="Current:" Width="90" HorizontalContentAlignment="Right" Background="#FF373737"/>
+                    <Label x:Name="lblPackageTemp" Content="0" Width="150" Background="#FF373737"/>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="40" Width="420">
+                    <Label Content="Total Load" Width="180" Background="{x:Null}"/>
+                    <Label Content="Current:" Width="90" HorizontalContentAlignment="Right" Background="{x:Null}"/>
+                    <Label x:Name="lblTotalLoad" Content="0" Width="150" Background="{x:Null}"/>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="40">
+                    <Label Content="Package Power" Width="180" Background="#FF373737"/>
+                    <Label Content="Current:" Width="90" HorizontalContentAlignment="Right" Background="#FF373737"/>
+                    <Label x:Name="lblPackagePower" Content="0" Width="150" Background="#FF373737"/>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="40">
+                    <Label Content="Bus Speed" Width="180" Background="{x:Null}"/>
+                    <Label Content="Current:" Width="90" HorizontalContentAlignment="Right" Background="{x:Null}"/>
+                    <Label x:Name="lblBusSpeed" Content="0" Width="150" Background="{x:Null}"/>
+                </StackPanel>
+            </DockPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Page>
