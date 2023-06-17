@@ -1,0 +1,1 @@
+# StrayacoinMinerLauncher007
